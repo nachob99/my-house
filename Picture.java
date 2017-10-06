@@ -22,7 +22,7 @@ public class Picture
      */
     public Picture()
     {
-        // nothing to do... instance variables are automatically set to null
+       
     }
 
     /**
@@ -62,11 +62,18 @@ public class Picture
         sun.moveVertical(-40);
         sun.changeSize(80);
         sun.makeVisible();
-        sun.slowMoveVertical(0);
+        /**sun.slowMoveVertical(0); */
         
         
     }
 
+    /**
+     * 
+     */
+    public void moveSun()
+        {
+        sun.slowMoveVertical(60);
+        }
     /**
      * Change this picture to black/white display
      */
