@@ -16,6 +16,7 @@ public class Picture
     private Triangle roof;
     private Circle sun;
     private Circle campo;
+    private Person nacho;
 
     /**
      * Constructor for objects of class Picture
@@ -32,9 +33,9 @@ public class Picture
     {
         campo = new Circle();
         campo.changeColor("green");
-        campo.moveHorizontal(-395);
-        campo.moveVertical(165);
-        campo.changeSize(800);
+        campo.moveHorizontal(-900);
+        campo.moveVertical(160);
+        campo.changeSize(1800);
         campo.makeVisible();
         
         wall = new Square();
@@ -64,6 +65,11 @@ public class Picture
         sun.makeVisible();
         /**sun.slowMoveVertical(0); */
         
+        nacho = new Person();
+        nacho.moveHorizontal (-200);
+        nacho.moveVertical (30);
+        nacho.changeColor("black");
+        nacho.makeVisible ();
         
     }
 
@@ -71,8 +77,12 @@ public class Picture
      * 
      */
     public void moveSun()
+    
         {
-        sun.slowMoveVertical(60);
+        sun.slowMoveVertical(100);
+        nacho.slowMoveHorizontal(50);
+   
+       
         }
     /**
      * Change this picture to black/white display
